@@ -1,0 +1,1 @@
+from api.graphql import schema
