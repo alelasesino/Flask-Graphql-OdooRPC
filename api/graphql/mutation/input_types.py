@@ -11,4 +11,5 @@ class InputFarm(InputObjectType):
     name = String()
     description = String()
     code = String()
+    partner_id = Int()
     parcels = List(InputParcel)
