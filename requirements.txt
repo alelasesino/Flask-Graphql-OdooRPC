@@ -1,4 +1,4 @@
 flask
 flask_graphql
 graphene
-odoorpc
+git+https://github.com/OCA/odoorpc.git
