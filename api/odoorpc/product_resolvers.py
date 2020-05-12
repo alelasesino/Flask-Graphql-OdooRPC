@@ -12,15 +12,15 @@ def resolve_products(self, info):
 
     for product in product_model.browse(product_ids):
 
-        product = Product(
+        product_ql = Product(
             id=product.id,
             display_name=product.display_name,
-            code=product.code,
-            barcode= "" if not product.barcode else product.barcode,
+            code="" if not product.code else product.code,
+            barcode="" if not product.barcode else product.barcode,
             categ_id=product.categ_id.id
         )
 
-        products.append(product)
+        products.append(product_ql)
 
     return products
 
