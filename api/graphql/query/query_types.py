@@ -15,6 +15,7 @@ class Farm(ObjectType):
     create_date = DateTime()
     description = String()
     code = String()
+    partner_id = Int()
     parcels = List(Parcel)
 
 
