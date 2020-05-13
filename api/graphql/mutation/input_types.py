@@ -1,4 +1,4 @@
-from graphene import InputObjectType, Int, String, DateTime, List
+from graphene import InputObjectType, Int, String, DateTime, List, Float
 
 
 class InputParcel(InputObjectType):
@@ -13,3 +13,14 @@ class InputFarm(InputObjectType):
     code = String()
     partner_id = Int()
     parcels = List(InputParcel)
+
+
+class InputProduct(InputObjectType):
+    id = Int()
+    lot = String()
+    quantity = Float()
+
+
+class InputReception(InputObjectType):
+    farm_id = Int()
+    products = List(InputProduct)

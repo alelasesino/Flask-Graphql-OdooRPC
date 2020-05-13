@@ -8,6 +8,10 @@ def get_model(name):
     else:
         raise ValueError('Odoo model not exist!.')
 
+def get_model_by_id(model, id):
+    odoo_model = get_model(model)
+    return odoo_model.browse(id)
+
 
 def get_kilos(variant, quantity):
 
