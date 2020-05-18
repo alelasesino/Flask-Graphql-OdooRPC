@@ -9,6 +9,7 @@ def resolve_products(self, info):
     products = []
     product_model = get_model('product.product') 
     product_ids = product_model.search([])
+    product_ids = product_model.search([], order='categ_id desc')
 
     for product in product_model.browse(product_ids):
 

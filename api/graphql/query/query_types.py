@@ -41,6 +41,7 @@ class Product(ObjectType):
     code = String()
     barcode = String()
     categ_id = Int()
+    image = String()
 
 
 
