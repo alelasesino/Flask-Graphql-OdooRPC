@@ -8,7 +8,6 @@ def resolve_products(self, info):
 
     products = []
     product_model = get_model('product.product') 
-    product_ids = product_model.search([])
     product_ids = product_model.search([], order='categ_id desc')
 
     for product in product_model.browse(product_ids):
@@ -18,7 +17,8 @@ def resolve_products(self, info):
             display_name=product.display_name,
             code="" if not product.code else product.code,
             barcode="" if not product.barcode else product.barcode,
-            categ_id=product.categ_id.id
+            categ_id=product.categ_id.id,
+            image=product.image_512
         )
 
         products.append(product_ql)
