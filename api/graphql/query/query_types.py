@@ -21,6 +21,7 @@ class Farm(ObjectType):
 
 class ProductReception(ObjectType):
     id = Int()
+    code = String()
     display_name = String()
     kilos = Float()
     lote = String()

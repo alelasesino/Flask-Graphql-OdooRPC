@@ -31,6 +31,7 @@ def resolve_reception(self, info, id):
 
             receive_product = ProductReception(
                 id=product.id,
+                code=product.code,
                 display_name=product.display_name,
                 kilos=f.qty_done,
                 lote=f.lot_id.name
@@ -76,6 +77,7 @@ def resolve_receptions(self, info, today):
 
                     receive_product = ProductReception(
                         id=product.id,
+                        code=product.code,
                         display_name=product.display_name,
                         kilos=f.qty_done,
                         lote=f.lot_id.name
